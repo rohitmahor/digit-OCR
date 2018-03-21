@@ -77,10 +77,10 @@ print("Baseline Error: %.2f%%" % (100-scores[1]*100))
 from keras.models import load_model
 classifier.save('/media/rohitkumar/Rohit-Sonu/python3/Machine Learning A-Z Template Folder/Part 8 - Deep Learning/Section 40 - Convolutional Neural Networks (CNN)/ocr.h5')  # creates a HDF5 file 'my_model.h5'
 
-
+classifier = load_model('/media/rohitkumar/Rohit-Sonu/python3/projects/digit-OCR/ocr.h5')
 # Recognize images
 from PIL import Image
-img = Image.open('/media/rohitkumar/Rohit-Sonu/python3/Machine Learning A-Z Template Folder/Part 8 - Deep Learning/Section 40 - Convolutional Neural Networks (CNN)/ocr/3.png')
+img = Image.open('/media/rohitkumar/Rohit-Sonu/python3/projects/digit-OCR/testSet/3.png')
 img = img.convert('1')
 # print(img)
 
